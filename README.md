@@ -4,7 +4,7 @@ ASP.NET Core MVC application
 FilmoviApp je aplikacija napravljena korištenjem ASP.NET Core MVC framework-a.
 Omogućuje unos i pregled podataka o filmovima.
 
-####Model
+#### Model
 
 Korištene model klase su : Film, Glumac, Redatelj, Žanr i GlumacFilm.
 GlumacFilm klasa povezuje klasu Film i Glumac:
@@ -19,19 +19,19 @@ public class GlumacFilm
     }
 '''
 
-####View
+#### View
 
 Na svakom view-u je omogućeno pretraživanje (search), stvaranje novih podataka, uređivanje postojećih i prikaz detalja.
 
-#####Tražilice
+##### Tražilice
 Postoje pretrage prema upisanoj ključnoj riječi, ili prema odabiru u drop down listi.
 
 Prilikom pokretanja aplikacije se otvara Home stranica koja sadrži slike.
-Za izmjenjivanje slika je korišten '''carousel'''.
+Za izmjenjivanje slika je korišten ''' carousel '''.
 Za daljnji pregled stranice potrebno se prijaviti ili registrirati kao novi korisnik.
-Ograničenje pregleda je postignuto dodavanjem '''[Authorize]''' na željenim pozicijama u kontrolerima.
+Ograničenje pregleda je postignuto dodavanjem ''' [Authorize] ''' na željenim pozicijama u kontrolerima.
 
-####Controller
+#### Controller
 
 Za povezivanje modela i view-a koriste se kontroleri.
 Kako bi se omugućilo prikaz podataka prema želejnoj pretrazi korišteni su LINQ upiti.
