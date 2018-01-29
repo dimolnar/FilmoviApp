@@ -1,0 +1,68 @@
+﻿@model IEnumerable<FilmoviApp.Models.GlumacFilm>
+
+@{
+    ViewData["Title"] = "Filmovi i glumci";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<br />
+<form>
+    <table class="table-condensed" style="background-color:lightblue">
+        <thead>
+            <tr>
+                <th>Tražilica</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Film:</td>
+                <td>@Html.DropDownList("film", "Sve")</td>
+            </tr>
+            <tr>
+                <td>Glumac:</td>
+                <td>@Html.DropDownList("glumac", "Sve")</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td><input type="submit" value="Search" /></td>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
+</form>
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Film)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Glumac)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Film.Naziv)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Glumac.ImeIPrezime)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

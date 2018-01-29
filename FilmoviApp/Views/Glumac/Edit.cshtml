@@ -1,0 +1,54 @@
+﻿@model FilmoviApp.Models.Glumac
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<h4>Glumac</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="GlumacId" />
+            <div class="form-group">
+                <label asp-for="Ime" class="control-label"></label>
+                <input asp-for="Ime" class="form-control" />
+                <span asp-validation-for="Ime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Prezime" class="control-label"></label>
+                <input asp-for="Prezime" class="form-control" />
+                <span asp-validation-for="Prezime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RodnoIme" class="control-label"></label>
+                <input asp-for="RodnoIme" class="form-control" />
+                <span asp-validation-for="RodnoIme" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DatRod" class="control-label"></label>
+                <input asp-for="DatRod" class="form-control" />
+                <span asp-validation-for="DatRod" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MjestoRod" class="control-label"></label>
+                <input asp-for="MjestoRod" class="form-control" />
+                <span asp-validation-for="MjestoRod" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

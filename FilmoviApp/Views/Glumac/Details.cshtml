@@ -1,0 +1,48 @@
+﻿@model FilmoviApp.Models.Glumac
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div>
+    <h4>Glumac</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Prezime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Prezime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RodnoIme)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RodnoIme)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DatRod)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DatRod)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MjestoRod)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MjestoRod)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.GlumacId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
