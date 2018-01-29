@@ -18,7 +18,7 @@ public class GlumacFilm
         public Glumac Glumac { get; set; }
     }
 '''
- 
+
 ####View
 
 Na svakom view-u je omogućeno pretraživanje (search), stvaranje novih podataka, uređivanje postojećih i prikaz detalja.
