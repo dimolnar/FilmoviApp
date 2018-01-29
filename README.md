@@ -15,7 +15,8 @@ GlumacFilm klasa povezuje klasu Film i Glumac:
         public Film Film { get; set; }
         public int GlumacId { get; set; }
         public Glumac Glumac { get; set; }
-    }```
+    }
+```
 
 #### View
 
@@ -25,9 +26,10 @@ Na svakom view-u je omogućeno pretraživanje (search), stvaranje novih podataka
 Postoje pretrage prema upisanoj ključnoj riječi, ili prema odabiru u drop down listi.
 
 Prilikom pokretanja aplikacije se otvara Home stranica koja sadrži slike.
-Za izmjenjivanje slika je korišten ```carousel'```.
+Za izmjenjivanje slika je korišten `carousel`.
+.
 Za daljnji pregled stranice potrebno se prijaviti ili registrirati kao novi korisnik.
-Ograničenje pregleda je postignuto dodavanjem ```[Authorize]``` na željenim pozicijama u kontrolerima.
+Ograničenje pregleda je postignuto dodavanjem `[Authorize]` na željenim pozicijama u kontrolerima.
 
 #### Controller
 
@@ -39,4 +41,5 @@ Primjer:
   if (!string.IsNullOrEmpty(film))
   {
 	  glumciFilmovi = glumciFilmovi.Where(x => x.Film.Naziv == film);
-  }```
+  }
+ ```
