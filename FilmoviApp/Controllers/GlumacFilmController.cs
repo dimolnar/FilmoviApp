@@ -27,11 +27,11 @@ namespace FilmoviApp.Controllers
             var FilmL = new List<string>();
             var GlumacL = new List<string>();
 
-            var FilmQ = from g in _context.GlumacFilm.Include(g => g.Film).Include(g => g.Glumac)
+            var FilmQ = from g in _context.GlumacFilm.Include(g => g.Film)
                         orderby g.Film.Naziv
                         select g.Film.Naziv;
 
-            var GlumacQ = from g in _context.GlumacFilm.Include(g => g.Film).Include(g => g.Glumac)
+            var GlumacQ = from g in _context.GlumacFilm.Include(g => g.Glumac)
                           orderby g.Glumac.ImeIPrezime
                           select g.Glumac.ImeIPrezime;
 
